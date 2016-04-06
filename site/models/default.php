@@ -15,7 +15,7 @@ class SdprojectsModelDefault extends JModelList
 		$query = $db->getQuery(true);
  
 		// Create the base select statement.
-		$query->select($db->quoteName(array('title', 'year', 'students', 'solution', 'reqs', 'semester', 'team_photo', 'graphic1', 'graphic2', 'webcast', 'problem')))
+		$query->select($db->quoteName(array('id', 'title', 'year', 'students', 'solution', 'reqs', 'semester', 'team_photo', 'graphic1', 'graphic2', 'webcast', 'problem')))
                 ->from($db->quoteName('#__projects'))
                 ->order('year DESC');
  		$db->setQuery($query);

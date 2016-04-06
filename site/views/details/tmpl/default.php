@@ -1,9 +1,8 @@
 <?php defined('_JEXEC') or die('Restricted access'); ?>
 <div id="sdprojects">
-	<h1><?php echo $this->sdp->id ?></h1>
+	<h1><?php echo $this->sdp->title ?></h1>
 	<div class="sdpdetails">
-		<p class="sdptitle"><?php echo $this->sdp->title?></p>
-		<p class="sdpsemester"><?php echo $this->sdp->semester ?>&nbsp<?php echo $this->sdp->year ?></p>
+		<p class="sdpsemester"><?php echo $this->sdp->semester ?><?php echo $this->sdp->year ?></p>
 		<p class="sdpstudents"><?php echo $this->sdp->students ?></p>
 		<p class="sdpproblem"><?php echo $this->sdp->problem ?></p>
 		<p class="sdpsolution"><?php echo $this->sdp->solution ?></p>
