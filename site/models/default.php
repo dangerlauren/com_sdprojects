@@ -11,7 +11,7 @@ class SdprojectsModelDefault extends JModelList
 	{
 		// Initialize variables.
 		$db    = JFactory::getDbo();
-		$this->setState('list.limit', 10);
+		$this->setState('list.limit', 15);
 		$query = $db->getQuery(true);
  
 		// Create the base select statement.
