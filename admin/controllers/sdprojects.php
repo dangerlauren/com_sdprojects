@@ -27,7 +27,7 @@ class SdprojectsControllerSdprojects extends JControllerAdmin
 	 *
 	 * @since   1.6
 	 */
-	public function getModel($name = 'Sdp', $prefix = 'SdprojectsModel', $config = array('ignore_request' => true))
+	public function getModel($name = 'Sdprojects', $prefix = 'SdprojectsModel', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
  
