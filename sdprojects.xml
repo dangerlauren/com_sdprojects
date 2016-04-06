@@ -44,6 +44,8 @@
 			<folder>models</folder>
 			<!-- views files section -->
 			<folder>views</folder>
+			<!-- controllers files section -->
+			<folder>controllers</folder>
 		</files>
 	</administration>
  
