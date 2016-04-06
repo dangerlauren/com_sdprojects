@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.2.0" method="upgrade">
  
-	<name>SeniorDesignProjects</name>
+	<name>Sdprojects</name>
 	<!-- The following elements are optional and free of formatting constraints -->
 	<creationDate>March 2016</creationDate>
 	<author>Lauren Grant</author>
