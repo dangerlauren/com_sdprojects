@@ -10,9 +10,8 @@ foreach($this->items as $row):
 ?>
 
 <div class="sdp">
-	<p class="sdp-id"><?php echo $row->id ?></p>
-	<p class="sdp-title"><?php echo $row->title ?></p>
-	<p class="sdp-year"><?php echo $row->year ?></p>
+	<p class="sdp-title"><a href="<?php echo JRoute::_('index.php?view=details&id='.$row->id); ?>"><?php echo $row->title ?>, <?php echo $row->year ?></a></p>
+	<p class="sdp-students"><?php echo $row->students ?></p>
 </div>
 <?php endforeach; ?>
 </div>
