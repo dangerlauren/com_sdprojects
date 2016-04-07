@@ -10,7 +10,7 @@
 		<p class="sdpgraphic1"><img src="<?php echo $this->sdp->graphic1 ?>"></p>
 		<p class="sdpgraphic2"><img src="<?php echo $this->sdp->graphic2 ?>"></p>
 		<p class="sdpteam"><img src="<?php echo $this->sdp->team_photo ?>"></p>
-		<p class="sdpwebcast"><?php echo $this->sdp->webcast ?></p>
+		<p class="sdpwebcast"><a href="<?php echo $this->sdp->webcast ?>">Watch the Webcast</a></p>
 	</div>
 </div>
 
