@@ -15,7 +15,7 @@
 				<?php echo JHtml::_('grid.sort', 'Title', 'title', $this->sortDirection, $this->sortColumn); ?>
 			</th>
 			<th width="2%">
-				<?php echo JText::_('grid.sort', 'ID', 'id', $this->sortDirection, $this->sortColumn); ?>
+				<?php echo JHtml::_('grid.sort', 'ID', 'id', $this->sortDirection, $this->sortColumn); ?>
 			</th>
 		</tr>
 		</thead>
