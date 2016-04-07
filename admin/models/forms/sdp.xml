@@ -76,14 +76,19 @@
 				/>		
 		<field
 				name="graphic2"
-				type="file"
+				type="media"
 				label="Graphic 2"
 				/>
 		<field
 				name="team_photo"
-				type="file"
+				type="media"
 				label="Team Photo"
-				/>		
+				/>	
+		<field
+				name="webcast"
+				type="URL"
+				label="Webcast"
+				/>			
 							
 	</fieldset>
 </form>
