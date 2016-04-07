@@ -71,7 +71,7 @@
 				/>	
 		<field
 				name="graphic1"
-				type="file"
+				type="media"
 				label="Graphic 1"
 				/>		
 		<field
