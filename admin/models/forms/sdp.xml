@@ -26,19 +26,19 @@
 				/>			
 		<field
 				name="title"
-				type="text"
+				type="editor"
 				label="Title"
 				description="Title"
-				size="100"
+				width="1000"
 				class="inputbox"
 				default=""
 				/>
 		<field
 				name="students"
-				type="text"
+				type="editor"
 				label="Students"
 				description="Students"
-				size="200"
+				width="1000"
 				class="inputbox"
 				default=""
 				/>	
@@ -53,19 +53,19 @@
 				/>	
 		<field
 				name="problem"
-				type="text"
+				type="editor"
 				label="Problem"
 				description="Problem"
-				size="1000"
+				width="1000"
 				class="inputbox"
 				default=""
 				/>	
 		<field
 				name="solution"
-				type="text"
+				type="editor"
 				label="Solution"
 				description="Solution"
-				size="1000"
+				width="1000"
 				class="inputbox"
 				default=""
 				/>	
@@ -73,6 +73,16 @@
 				name="graphic1"
 				type="file"
 				label="Graphic 1"
+				/>		
+		<field
+				name="graphic2"
+				type="file"
+				label="Graphic 2"
+				/>
+		<field
+				name="team_photo"
+				type="file"
+				label="Team Photo"
 				/>		
 							
 	</fieldset>
