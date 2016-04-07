@@ -26,7 +26,7 @@
 				/>			
 		<field
 				name="title"
-				type="editor"
+				type="textarea"
 				label="Title"
 				description="Title"
 				width="1000"
@@ -87,7 +87,7 @@
 		<field
 				name="webcast"
 				type="URL"
-				label="Webcast"
+				label="Webcast URL"
 				/>			
 							
 	</fieldset>
