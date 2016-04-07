@@ -20,7 +20,7 @@ class SdprojectsViewSdprojects extends JViewLegacy
 		$state = $this->get('State');
 
 		$this->sortDirection = $state->get('list.direction');
-		$this->sortColumn = $state->('list.ordering');
+		$this->sortColumn = $state->get('list.ordering');
  
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
