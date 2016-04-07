@@ -16,6 +16,15 @@
 				default=""
 				/>
 		<field
+				name="semester"
+				type="text"
+				label="Semester"
+				description="Semester"
+				size="100"
+				class="inputbox"
+				default=""
+				/>			
+		<field
 				name="title"
 				type="text"
 				label="Title"
@@ -24,5 +33,42 @@
 				class="inputbox"
 				default=""
 				/>
+		<field
+				name="students"
+				type="text"
+				label="Students"
+				description="Students"
+				size="200"
+				class="inputbox"
+				default=""
+				/>	
+		<field
+				name="reqs"
+				type="text"
+				label="Requirements"
+				description="Requirements"
+				size="1000"
+				class="inputbox"
+				default=""
+				/>	
+		<field
+				name="problem"
+				type="text"
+				label="Problem"
+				description="Problem"
+				size="1000"
+				class="inputbox"
+				default=""
+				/>	
+		<field
+				name="solution"
+				type="text"
+				label="Solution"
+				description="Solution"
+				size="1000"
+				class="inputbox"
+				default=""
+				/>	
+							
 	</fieldset>
 </form>
