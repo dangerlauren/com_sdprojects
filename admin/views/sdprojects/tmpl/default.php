@@ -9,13 +9,13 @@
 				<?php echo JHtml::_('grid.checkall'); ?>
 			</th>
 			<th width="25%">
-				<?php echo JText::_('Year') ;?>
+				<?php echo JHtml::_('grid.sort', 'Year', 'year', $this->sortDirection, $this->sortColumn); ?>
 			</th>
 			<th width="70%">
-				<?php echo JText::_('Title'); ?>
+				<?php echo JHtml::_('grid.sort', 'Title', 'title', $this->sortDirection, $this->sortColumn); ?>
 			</th>
 			<th width="2%">
-				<?php echo JText::_('ID'); ?>
+				<?php echo JText::_('grid.sort', 'ID', 'title', $this->sortDirection, $this->sortColumn); ?>
 			</th>
 		</tr>
 		</thead>
@@ -51,7 +51,9 @@
 			<?php endif; ?>
 		</tbody>
 	</table>
-		<input type="hidden" name="task" value=""/>
+	<input type="hidden" name="task" value=""/>
 	<input type="hidden" name="boxchecked" value="0"/>
+	<input type="hidden" name="filter_order" value="<?php echo $this->sortColumn; ?>" />
+	<input type="hidden" name="filter_order_Dir" value="<?php echo $this->sortDirection; ?>" />
 	<?php echo JHtml::_('form.token'); ?>
 </form>

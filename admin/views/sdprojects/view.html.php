@@ -17,6 +17,10 @@ class SdprojectsViewSdprojects extends JViewLegacy
 		// Get data from the model
 		$this->items		= $this->get('Items');
 		$this->pagination	= $this->get('Pagination');
+		$state = $this->get('State');
+
+		$this->sortDirection = $state->get('list.direction');
+		$this->sortColumn = $state->('list.ordering');
  
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
