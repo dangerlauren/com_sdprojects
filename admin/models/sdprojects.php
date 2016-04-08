@@ -35,6 +35,20 @@ class SdprojectsModelSdprojects extends JModelList
 		return $query;
 	}
 
+	protected function getSponsorsQuery()
+	{
+		// Initialize variables.
+		$db    = JFactory::getDbo();
+		$query = $db->getQuery(true);
+ 
+		// Create the base select statement.
+		$query->select('*')
+                ->from($db->quoteName('#__sponsors'));
+ 		$query->order($db->escape($this->getState('list.ordering', 'name')).' '.
+ 				$db->escape($this->getState('list.direction', 'DESC')));		
+		return $query;
+	}
+
 	protected function _buildQuery()
 	{
 		$query->select(array('a.*', 'b.id', 'b.name'))
