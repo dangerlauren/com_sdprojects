@@ -100,7 +100,7 @@
 				label="Company URL"
 				/>
 		<field
-				name="coname"
+				name="name"
 				type="list"
 				label="Company Name"
 				/>				

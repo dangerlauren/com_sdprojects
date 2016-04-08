@@ -15,7 +15,7 @@
 				<?php echo JHtml::_('grid.sort', 'Title', 'title', $this->sortDirection, $this->sortColumn); ?>
 			</th>
 			<th width="40%">
-				<?php echo JHtml::_('grid.sort', 'Company', 'coname', $this->sortDirection, $this->sortColumn); ?>
+				<?php echo JHtml::_('grid.sort', 'Company', 'name', $this->sortDirection, $this->sortColumn); ?>
 			</th>
 			<th width="2%">
 				<?php echo JHtml::_('grid.sort', 'ID', 'id', $this->sortDirection, $this->sortColumn); ?>
@@ -47,7 +47,7 @@
 								<?php echo $row->title; ?></a>
 						</td>
 						<td align="center">
-								<?php echo $row->coname; ?></a>
+								<?php echo $row->name; ?></a>
 						</td>
 						<td align="center">
 							<?php echo $row->id; ?>
