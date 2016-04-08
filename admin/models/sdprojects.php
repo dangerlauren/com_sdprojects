@@ -30,7 +30,7 @@ class SdprojectsModelSdprojects extends JModelList
 		// Create the base select statement.
 		$query->select('*')
                 ->from($db->quoteName('#__projects'));
- 		$query->order($db->escape($this->getState('list.ordering', 'year')).' '.
+ 		$query->order($db->escape($this->getState('list.ordering', 'a.year')).' '.
  				$db->escape($this->getState('list.direction', 'DESC')));
 
  		$query->select(array('a.*', 'b.id', 'b.name'))
