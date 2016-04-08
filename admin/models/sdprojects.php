@@ -26,13 +26,21 @@ class SdprojectsModelSdprojects extends JModelList
 		// Initialize variables.
 		$db    = JFactory::getDbo();
 		$query = $db->getQuery(true);
- 
-		// Create the base select statement.
-		$query->select('*')
-                ->from($db->quoteName('#__projects'));
- 		$query->order($db->escape($this->getState('list.ordering', 'year')).' '.
+		
+		$query->select(array('a.*', 'b.id', 'b.name'), array(NULL, 'coid','coname'))
+				->from($db->quoteName('#__projects', 'a'))
+				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
+				->where($db->quoteName('a.company') . ' = ' . ('b.id'));
+ 		$query->order($db->escape($this->getState('list.ordering', 'a.year')).' '.
  				$db->escape($this->getState('list.direction', 'DESC')));		
 		return $query;
+ 
+		// Create the base select statement.
+		//$query->select('*')
+          //      ->from($db->quoteName('#__projects'));
+ 		//$query->order($db->escape($this->getState('list.ordering', 'year')).' '.
+ 				//$db->escape($this->getState('list.direction', 'DESC')));		
+		//return $query;
 	}
 
 
