@@ -43,6 +43,8 @@ class SdprojectsModelSdprojects extends JModelList
 		// 		->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 		// 		->where($db->quoteName('a.company') . ' = ' . ('b.id'));
 		
+		$db    = JFactory::getDbo();
+		$query = $db->getQuery(true);
 		$query->select(array('a.*', 'b.id', 'b.name'), array(NULL, 'coid','coname'))
 				->from($db->quoteName('#__projects', 'a'))
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
