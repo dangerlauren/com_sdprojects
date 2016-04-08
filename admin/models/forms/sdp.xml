@@ -88,7 +88,23 @@
 				name="webcast"
 				type="URL"
 				label="Webcast URL"
-				/>			
+				/>	
+		<field
+				name="id"
+				type="text"
+				label="Company ID"
+				/>
+		<field
+				name="url"
+				type="URL"
+				label="Company URL"
+				/>
+		<field
+				name="name"
+				type="textarea"
+				label="Company Name"
+				/>				
+
 							
 	</fieldset>
 </form>
