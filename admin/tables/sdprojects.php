@@ -13,5 +13,6 @@ class SdprojectsTableSdprojects extends JTable
 	function __construct(&$db)
 	{
 		parent::__construct('#__projects', 'id', $db);
+		parent::__construct('#__sponsors', 'id', $db);
 	}
 }
