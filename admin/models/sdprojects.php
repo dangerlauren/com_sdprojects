@@ -36,7 +36,7 @@ class SdprojectsModelSdprojects extends JModelList
  		$query->select(array('a.*', 'b.id', 'b.name'))
 				->from($db->quoteName('#__projects', 'a'))
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
-				->where($db->quoteName('a.id' = '14');
+				->where($db->quoteName('a.id') . ' = ' . '14');
 
  		
 		return $query;
