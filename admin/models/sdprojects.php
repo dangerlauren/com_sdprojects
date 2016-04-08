@@ -43,19 +43,21 @@ class SdprojectsModelSdprojects extends JModelList
  
 		// Create the base select statement.
 		$query->select('*')
-                ->from($db->quoteName('#__sponsors'));
- 		$query->order($db->escape($this->getState('list.ordering', 'name')).' '.
- 				$db->escape($this->getState('list.direction', 'DESC')));		
+                ->from($db->quoteName('#__sponsors'));		
 		return $query;
 	}
 
 	protected function _buildQuery()
 	{
-		$query->select(array('a.*', 'b.id', 'b.name'))
-				->from($db->quoteName('#__projects', 'a'))
-				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
-				->where($db->quoteName('a.company') . ' = ' . ('b.id'));
+		// $query->select(array('a.*', 'b.id', 'b.name'))
+		// 		->from($db->quoteName('#__projects', 'a'))
+		// 		->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
+		// 		->where($db->quoteName('a.company') . ' = ' . ('b.id'));
 
+		$query->select('*')
+				->from($db->quoteName('#__projects'))
+				->join('LEFT', $db->quoteName('#__sponsors') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
+				->where($db->quoteName('a.company') . ' = ' . ('b.id'));
 
 		$db->setQuery($query);
 		$row = $db->loadObjectList(); 
