@@ -44,7 +44,7 @@
 								<?php echo $row->year; ?>
 						</td>
 						<td align="center">
-								<?php echo $row->title; ?></a>
+								<a href="<?php echo $link ?>"><?php echo $row->title; ?></a>
 						</td>
 						<td align="center">
 								<?php echo $row->name; ?></a>
