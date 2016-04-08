@@ -32,9 +32,14 @@ class SdprojectsModelSdprojects extends JModelList
                 ->from($db->quoteName('#__projects'));
  		$query->order($db->escape($this->getState('list.ordering', 'year')).' '.
  				$db->escape($this->getState('list.direction', 'DESC')));
+
+ 		$query->select('a.*', 'b.id', 'b.name')
+				->from($db->quoteName('#__projects', 'a'))
+				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
+				->where($db->quoteName('b.name') . ' LIKE \'a%\'')
+				->order($db->quoteName('a.id') . ' DESC');
  		
 		return $query;
 	}
-
 
 }
