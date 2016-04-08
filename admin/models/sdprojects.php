@@ -38,8 +38,10 @@ class SdprojectsModelSdprojects extends JModelList
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 				->where($db->quoteName('a.id') . ' = ' . '14');
 
- 		
-		return $query;
+
+		$db->setQuery($query);
+		$row = $db->loadObjectList(); 		
+		// return $query;
 	}
 
 }
