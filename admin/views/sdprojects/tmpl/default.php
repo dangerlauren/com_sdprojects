@@ -1,5 +1,5 @@
 <?php defined('_JEXEC') or die('Restricted access'); ?>
-<?php print_r($row); ?>
+<?php print_r($this->items); ?>
 <form action="index.php?option=com_sdprojects&view=sdprojects" method="post" id="adminForm" name="adminForm">
 	<table class="table table-striped table-hover">
 		<thead>
