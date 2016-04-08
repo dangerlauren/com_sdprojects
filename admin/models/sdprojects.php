@@ -30,18 +30,20 @@ class SdprojectsModelSdprojects extends JModelList
 		// Create the base select statement.
 		$query->select('*')
                 ->from($db->quoteName('#__projects'));
- 		$query->order($db->escape($this->getState('list.ordering', 'a.year')).' '.
- 				$db->escape($this->getState('list.direction', 'DESC')));
+ 		$query->order($db->escape($this->getState('list.ordering', 'year')).' '.
+ 				$db->escape($this->getState('list.direction', 'DESC')));		
+		return $query;
+	}
 
- 		$query->select(array('a.*', 'b.id', 'b.name'))
+	protected function _buildQuery()
+	{
+		$query->select(array('a.*', 'b.id', 'b.name'))
 				->from($db->quoteName('#__projects', 'a'))
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 				->where($db->quoteName('a.id') . ' = ' . '14');
 
 
 		$db->setQuery($query);
-		$row = $db->loadObjectList(); 		
-		// return $query;
-	}
-
+		$row = $db->loadObjectList(); 
+	}	
 }
