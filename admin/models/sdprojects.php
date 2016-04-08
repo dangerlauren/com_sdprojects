@@ -27,7 +27,7 @@ class SdprojectsModelSdprojects extends JModelList
 		$db    = JFactory::getDbo();
 		$query = $db->getQuery(true);
 		
-		$query->select(array('a.*', 'b.id', 'b.name'), array(NULL, 'coid','coname'))
+		$query->select(array('a.*', 'b.id', 'b.name'))
 				->from($db->quoteName('#__projects', 'a'))
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 				->where($db->quoteName('a.company') . ' = ' . ('b.id'));
