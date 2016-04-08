@@ -44,7 +44,7 @@
 				/>	
 		<field
 				name="reqs"
-				type="textarea"
+				type="editor"
 				label="Requirements"
 				description="Requirements"
 				width="1000"
@@ -62,7 +62,7 @@
 				/>	
 		<field
 				name="solution"
-				type="textarea"
+				type="editor"
 				label="Solution"
 				description="Solution"
 				width="1000"
@@ -101,7 +101,7 @@
 				/>
 		<field
 				name="name"
-				type="textarea"
+				type="list"
 				label="Company Name"
 				/>				
 
