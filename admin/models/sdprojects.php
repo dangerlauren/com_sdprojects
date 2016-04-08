@@ -54,7 +54,7 @@ class SdprojectsModelSdprojects extends JModelList
 		// 		->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 		// 		->where($db->quoteName('a.company') . ' = ' . ('b.id'));
 
-		$query->select('*')
+		$query->select('*, b.name')
 				->from($db->quoteName('#__projects'))
 				->join('LEFT', $db->quoteName('#__sponsors') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 				->where($db->quoteName('a.company') . ' = ' . ('b.id'));
