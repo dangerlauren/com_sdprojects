@@ -13,7 +13,7 @@ class SdprojectsViewDefault extends JViewLegacy
 		// Get data from the model
 		$this->items		= $this->get('Items');
 		$this->pagination	= $this->get('Pagination');
-		$state = $this->get('State');
+		
  
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
