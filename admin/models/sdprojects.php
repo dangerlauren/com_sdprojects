@@ -16,7 +16,8 @@ class SdprojectsModelSdprojects extends JModelList
 			'year',
 			'id',
 			'students',
-			'semester'
+			'semester',
+			'name'
 		);
 		parent::__construct($config);
 	}
