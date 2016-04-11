@@ -47,7 +47,7 @@
 								<a href="<?php echo $link ?>"><?php echo $row->title; ?></a>
 						</td>
 						<td align="center">
-								<a href="<?php echo $link ?>"><?php echo $row->name; ?></a>
+								<?php echo $row->name; ?>
 						</td>
 						<td align="center">
 							<?php echo $row->id; ?>
