@@ -18,7 +18,7 @@ class SdprojectsModelDefault extends JModelList
 		$query->select($db->quoteName(array('id', 'title', 'year', 'students', 'solution', 'reqs', 'semester', 'team_photo', 'graphic1', 'graphic2', 'webcast', 'problem', 'name')))
                 ->from($db->quoteName('#__projects'))
                 ->order('year DESC');
- 		$db->escape($this->getState('setQuery($query)');
+ 		$db->setQuery($query);
 		$db->execute();
 		$sdps = $db->loadObjectList();
 		return $query;
