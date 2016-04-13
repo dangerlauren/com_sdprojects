@@ -40,7 +40,7 @@ class SdprojectsModelDetails extends JModelItem
 				->from($db->quoteName('#__projects', 'a'))
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 				->where($db->quoteName('a.company') . ' = ' . ('b.id'))
-				->where($db->quoteName('a.id') . ' = ' . ($id)
+				->where($db->quoteName('a.id') . ' = ' . ($id));
 		//if (!isset($this->sdp))
 		//{
 			//$jinput = JFactory::getApplication()->input;
@@ -58,7 +58,7 @@ class SdprojectsModelDetails extends JModelItem
 		//}
  		$db->setQuery($query);
 		$db->execute();
-		$sdps = $db->loadObject();
+		$sdp = $db->loadObject();
 		return $sdp;
 	}
 }
