@@ -51,7 +51,9 @@ class SdprojectsModelSdp extends JModelAdmin
 		$id = JRequest::getInt('id');
 		
 		$query = $db->getQuery(true);	
- 		$query->select(array('a.*', 'b.id', 'b.name'))
+ 		$query->select(array('a.*'))
+ 		->select($db->quoteName('b.id', 'coid'))
+		->select($db->quoteName('b.name', 'coname'))
 				->from($db->quoteName('#__projects', 'a'))
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 				->where($db->quoteName('a.id') . ' = ' . ($id));
