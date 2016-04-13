@@ -1,4 +1,5 @@
 <?php defined('_JEXEC') or die('Restricted access'); ?>
+<?php print_r($this->sdp); ?>
 <div id="sdprojects">
 	<h1><?php echo $this->sdp->title ?></h1>
 	<div class="sdpdetails">
