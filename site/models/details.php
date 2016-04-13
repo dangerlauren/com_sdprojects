@@ -34,7 +34,7 @@ class SdprojectsModelDetails extends JModelItem
 	 */
 	public function getSdp()
 	{
-		$db    = JFactory::getDbo();
+		$db =& JFactory::getDBO();
 		$id = JRequest::getInt('id');	
  		$query->select(array('a.*', 'b.id', 'b.name'))
 				->from($db->quoteName('#__projects', 'a'))
