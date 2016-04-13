@@ -34,24 +34,31 @@ class SdprojectsModelDetails extends JModelItem
 	 */
 	public function getSdp()
 	{
-		
- 
-		if (!isset($this->sdp))
-		{
-			$jinput = JFactory::getApplication()->input;
-			$id = $jinput->get('id');
+		$db    = JFactory::getDbo();
+		$id = JRequest::getInt('id');	
+ 		$query->select(array('a.*', 'b.id', 'b.name'))
+				->from($db->quoteName('#__projects', 'a'))
+				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
+				->where($db->quoteName('a.company') . ' = ' . ('b.id'))
+				->where($db->quoteName('a.id') . ' = ' . ($id)
+		//if (!isset($this->sdp))
+		//{
+			//$jinput = JFactory::getApplication()->input;
+			//$id = $jinput->get('id');
 			//$id = '328143808';
  
 			// Get a TableSdprojects instance
-			$table = $this->getTable();
+			//$table = $this->getTable();
  
 			// Load the message
-			$table->load($id);
+			//$table->load($id);
  
 			// Assign the message
-			$sdp = $table;
-		}
- 
+			//$sdp = $table;
+		//}
+ 		$db->setQuery($query);
+		$db->execute();
+		$sdps = $db->loadObject();
 		return $sdp;
 	}
 }
