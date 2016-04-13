@@ -101,7 +101,7 @@
 				/>
 		<field
 				name="coname"
-				type="list"
+				type="text"
 				label="Company Name"
 				/>				
 
