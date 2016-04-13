@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
                     <?php foreach ($this->form->getFieldset() as $field): ?>
                         <div class="control-group">
                             <div class="control-label"><?php echo $field->label; ?></div>
-                            <div class="controls"><?php echo $field->input; ?></div>
+                            <div class="controls"><?php echo $field->input; print_r();?></div>
                         </div>
                     <?php endforeach; ?>
                 </div>
