@@ -17,7 +17,9 @@ class SdprojectsModelDefault extends JModelList
 		// Create the base select statement.
 		// $query->select($db->quoteName(array('id', 'title', 'year', 'students', 'solution', 'reqs', 'semester', 'team_photo', 'graphic1', 'graphic2', 'webcast', 'problem', 'name')))
   //               ->from($db->quoteName('#__projects'))
-            $query->select(array('a.*', 'b.id', 'b.name'))
+            $query->select(array('a.*'))
+            ->select($db->quoteName('b.id', 'coid'))
+            ->select($db->quoteName('b.name', 'coname'))
 				->from($db->quoteName('#__projects', 'a'))
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 				->where($db->quoteName('a.company') . ' = ' . ('b.id'))
