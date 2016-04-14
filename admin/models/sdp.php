@@ -49,15 +49,22 @@ class SdprojectsModelSdp extends JModelAdmin
 	{
 		$db =& JFactory::getDBO();
 		$id = JRequest::getInt('id');
-		
+
 		$query = $db->getQuery(true);	
- 		$query->select(array('a.*'))
- 		->select($db->quoteName('b.id', 'coid'))
-		->select($db->quoteName('b.name', 'coname'))
-		->select($db->quoteName('b.url', 'courl'))
+ 		$query->select(array('a.*', 'b.id', 'b.name', 'b.url'))
 				->from($db->quoteName('#__projects', 'a'))
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 				->where($db->quoteName('a.id') . ' = ' . ($id));
+		
+		// $query = $db->getQuery(true);	
+ 	// 	$query->select(array('a.*'))
+ 	// 	->select($db->quoteName('b.id', 'coid'))
+		// ->select($db->quoteName('b.name', 'coname'))
+		// ->select($db->quoteName('b.url', 'courl'))
+		// 		->from($db->quoteName('#__projects', 'a'))
+		// 		->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
+		// 		->where($db->quoteName('a.id') . ' = ' . ($id));
+				
  		$db->setQuery($query);
 		$db->execute();
 		$sdp = $db->loadObject();
