@@ -34,14 +34,25 @@ class SdprojectsModelDetails extends JModelItem
 	 */
 	public function getSdp()
 	{
-		$db =& JFactory::getDBO();
-		$id = JRequest::getInt('id');
+		$db    = JFactory::getDbo();
 		
-		$query = $db->getQuery(true);	
- 		$query->select(array('a.*', 'b.id', 'b.name'))
+		$query = $db->getQuery(true);
+
+		$query->select(array('a.*'))
+            ->select($db->quoteName('b.id', 'coid'))
+            ->select($db->quoteName('b.name', 'coname'))
+            ->select($db->quoteName('b.url', 'courl'))
 				->from($db->quoteName('#__projects', 'a'))
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
-				->where($db->quoteName('a.id') . ' = ' . ($id));
+				->where($db->quoteName('a.company') . ' = ' . ('b.id'))
+                ->order('year DESC');
+ 		
+		
+		// $query = $db->getQuery(true);	
+ 	// 	$query->select(array('a.*', 'b.id', 'b.name'))
+		// 		->from($db->quoteName('#__projects', 'a'))
+		// 		->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
+		// 		->where($db->quoteName('a.id') . ' = ' . ($id));
 		//if (!isset($this->sdp))
 		//{
 			//$jinput = JFactory::getApplication()->input;
@@ -59,7 +70,7 @@ class SdprojectsModelDetails extends JModelItem
 		//}
  		$db->setQuery($query);
 		$db->execute();
-		$sdp = $db->loadObject();
-		return $sdp;
+		$sdps = $db->loadObjectList();
+		return $query;
 	}
 }
