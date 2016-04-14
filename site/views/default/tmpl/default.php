@@ -13,7 +13,7 @@ foreach($this->items as $row):
 	<p class="sdp-title"><a href="<?php echo JRoute::_('index.php?view=details&id='.$row->id); ?>"><?php echo $row->title ?></a></p>
 	<p class="sdpstudents"><?php echo $row->students ?></p>
 	<p class="sdpsponsors"><?php echo $row->coname ?></p>
-	<p><a href="<?php echo $row->courl ?>">Company URL</a></p>
+	<p><?php echo $row->courl ?></p>
 	<p class="sdpsemester"><?php echo $row->semester ?> <?php echo $row->year ?></p>
 </div>
 <?php endforeach; ?>
