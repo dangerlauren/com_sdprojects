@@ -101,7 +101,7 @@
 				/>
 		<field
 				name="name"
-				type="text"
+				type="list"
 				label="Company Name"
 				/>				
 
