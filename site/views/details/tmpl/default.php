@@ -7,7 +7,7 @@
 
 		<?php if ($this->sdp->url == !NULL): ?>
 		<p class="sdpsponsors"><b>Sponsor: </b><a href="<?php echo $this->sdp->url ?>"><?php echo $this->sdp->name ?></a></p>
-		<?php elseif ?>
+		<?php elseif ($this->sdp->url == NULL): ?>
 		<p class="sdpsponsors"><b>Sponsor: </b><?php echo $this->sdp->name ?></a></p>
 		<?php endif ?>
 
