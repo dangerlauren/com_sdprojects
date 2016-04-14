@@ -90,12 +90,12 @@
 				label="Webcast URL"
 				/>	
 		<field
-				name="id"
+				name="coid"
 				type="text"
 				label="Company ID"
 				/>
 		<field
-				name="url"
+				name="courl"
 				type="URL"
 				label="Company URL"
 				/>

@@ -54,6 +54,7 @@ class SdprojectsModelSdp extends JModelAdmin
  		$query->select(array('a.*'))
  		->select($db->quoteName('b.id', 'coid'))
 		->select($db->quoteName('b.name', 'coname'))
+		->select($db->quoteName('b.url', 'courl'))
 				->from($db->quoteName('#__projects', 'a'))
 				->join('LEFT', $db->quoteName('#__sponsors', 'b') .' ON (' . $db->quoteName('a.company') . ' = ' . $db->quoteName('b.id') . ')')
 				->where($db->quoteName('a.id') . ' = ' . ($id));
