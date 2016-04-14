@@ -11,7 +11,7 @@
 		<p class="sdpsponsors"><b>Sponsor: </b><?php echo $this->sdp->name ?></a></p>
 		<?php endif ?>
 
-		<p class="sdpsemester"><b>Date: </b><?php echo $this->sdp->semester ?> <?php $year = $this->sdp->year; $year = ucfirst($year); echo $year ?></p>
+		<p class="sdpsemester"><b>Date: </b><?php $foo = $this->sdp->semester; $foo = ucfirst($foo); echo $foo ?> <?php echo $this->sdp->year ?></p>
 		<p class="sdpreqs"><b>Requirements:</b><br /><?php echo $this->sdp->reqs ?></p>
 		<p class="sdpproblem"><b>Problem:</b><br /><?php echo $this->sdp->problem ?></p>
 		<p class="sdpsolution"><b>Solution:</b><br /><?php echo $this->sdp->solution ?></p>
