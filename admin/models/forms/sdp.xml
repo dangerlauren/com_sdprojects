@@ -89,14 +89,10 @@
 				type="URL"
 				label="Webcast URL"
 				/>	
-		<field
-				name="id"
-				type="text"
-				label="Company ID"
-				/>
+	
 	
 		<field
-				name="name"
+				name="company"
 				type="Sponsors"
 				label="Sponsor"
 				/>				
