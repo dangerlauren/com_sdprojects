@@ -20,7 +20,7 @@ class JFormFieldSponsors extends JFormField
   		}
   		
   			
-	 	$dropdown = JHTML::_('select.genericlist', $options, 'company', null, 'value', 'text', $row->id);
+	 	$dropdown = JHTML::_('select.genericlist', $options, 'company', null, 'value', 'text', $options->id);
 		return $dropdown;
 	
 	}
