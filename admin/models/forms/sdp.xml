@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form enctype="multipart/form-data">
-	<fieldset>
+	<fieldset addfieldpath="/administrator/components/com_sdprojects/models/fields">
 		<field
 				name="id"
 				type="hidden"
@@ -94,15 +94,11 @@
 				type="text"
 				label="Company ID"
 				/>
-		<field
-				name="url"
-				type="URL"
-				label="Company URL"
-				/>
+	
 		<field
 				name="name"
-				type="list"
-				label="Company Name"
+				type="Sponsors"
+				label="Sponsor"
 				/>				
 
 							
