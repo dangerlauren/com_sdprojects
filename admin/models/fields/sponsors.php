@@ -7,7 +7,7 @@ class JFormFieldSponsors extends JFormField
 {
 	protected $type = 'Sponsors';
 	
-	protected function getOptions()
+	public function getInput() 
 	{
 		$db = JFactory::getDBO();
 		$query = 'SELECT * FROM #__sponsors ORDER BY name';
@@ -19,7 +19,7 @@ class JFormFieldSponsors extends JFormField
   			$options[] = JHTML::_('select.option', $listc->id, $listc->name );
   		}
   			
-	 	$options = array_merge(parent::getOptions(), $options);
+	 	
 		return $options;
 	
 	}
