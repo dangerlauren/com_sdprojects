@@ -19,8 +19,8 @@ class JFormFieldSponsors extends JFormField
   			$options[] = JHTML::_('select.option', $listc->id, $listc->name );
   		}
   			
-	 	
-		return $options;
+	 	$dropdown = JHTML::_('select.genericlist', $options, $selected);
+		return $dropdown;
 	
 	}
 }
