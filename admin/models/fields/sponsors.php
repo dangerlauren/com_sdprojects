@@ -11,7 +11,7 @@ class JFormFieldSponsors extends JFormField
 	{
 		$db = JFactory::getDBO();
 		$query = '
-SELECT a.id,a.title,a.year,a.company, b.id AS coid,b.name FROM #__projects AS a LEFT JOIN #__sponsors AS b ON (a.company = b.id) LIMIT 0, 1000;
+SELECT a.id,b.company, b.id AS projid,a.name FROM #__sponsors AS a LEFT JOIN #__projects AS b ON (a.id = b.company);
 ';
 		$db->setQuery( $query );
 		$allgs = $db->loadObjectList();
@@ -22,7 +22,7 @@ SELECT a.id,a.title,a.year,a.company, b.id AS coid,b.name FROM #__projects AS a 
   		}
   		
   			
-	 	$dropdown = JHTML::_('select.genericlist', $options, 'jform[company]', null, 'value', 'text', $options->id);
+	 	$dropdown = JHTML::_('select.genericlist', $options, 'jform[company]', null, 'value', 'text', $selected);
 		return $dropdown;
 	
 	}
