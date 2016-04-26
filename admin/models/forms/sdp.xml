@@ -91,11 +91,7 @@
 				/>	
 	
 	
-		<field
-				name="company"
-				type="Sponsors"
-				label="Sponsor"
-				/>				
+		<field name="company" type="sql" label="Sponsor" query="SELECT * FROM #__sponsors ORDER BY name" />		
 
 							
 	</fieldset>
