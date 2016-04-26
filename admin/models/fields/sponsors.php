@@ -18,7 +18,7 @@ SELECT a.id,b.company, b.id AS projid,a.name FROM #__sponsors AS a LEFT JOIN #__
 
 
   		foreach ($allgs as $listc) {
-  			$options[] = JHTML::_('select.option', $listc->coid, $listc->name );
+  			$options[] = JHTML::_('select.option', $listc->id, $listc->name );
   		}
   		
   			
