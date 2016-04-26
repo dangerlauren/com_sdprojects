@@ -10,15 +10,13 @@ class JFormFieldSponsors extends JFormField
 	public function getInput() 
 	{
 		$db = JFactory::getDBO();
-		$query = '
-SELECT a.id,a.title,a.year,a.company, b.id AS coid,b.name FROM #__projects AS a LEFT JOIN #__sponsors AS b ON (a.company = b.id) LIMIT 0, 1000;
-';
+		$query = 'SELECT * FROM #__sponsors ORDER BY name';
 		$db->setQuery( $query );
 		$allgs = $db->loadObjectList();
 
 
   		foreach ($allgs as $listc) {
-  			$options[] = JHTML::_('select.option', $listc->coid, $listc->name );
+  			$options[] = JHTML::_('select.option', $listc->id, $listc->name );
   		}
   		
   			
