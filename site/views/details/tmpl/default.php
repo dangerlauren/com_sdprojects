@@ -20,20 +20,26 @@
 		<p class="sdpwebcast"><a href="<?php echo $this->sdp->webcast ?>">Watch the Webcast</a></p>
 		<?php endif ?>
 
+		<?php if ($this->sdp->graphic1 == !NULL): ?> 
 		<div class="sdpimg">
 			<img src="<?php echo $this->sdp->graphic1 ?>">
 			<p>Project Graphic</p>
 		</div>
+		<?php endif ?>
 
+		<?php if ($this->sdp->graphic2 == !NULL): ?> 
 		<div class="sdpimg">
 			<img src="<?php echo $this->sdp->graphic2 ?>">
 			<p>Project Graphic</p>
 		</div>
+		<?php endif ?>
 
+		<?php if ($this->sdp->team_photo == !NULL): ?> 
 		<div class="sdpimg">
 			<img src="<?php echo $this->sdp->team_photo ?>">
 			<p>Team Photo</p>
 		</div>
+		<?php endif ?>
 
 		
 	</div>
