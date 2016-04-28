@@ -3,13 +3,13 @@
 <div id="sdprojects">
 	<h1><?php echo $this->sdp->title ?></h1>
 	<div class="sdpdetails">
-		<p class="sdpstudents"><b>Students: </b><?php echo $this->sdp->students ?></p>
+		<p class="sdpstudents"><b>Students: </b><?php echo $this->sdp->students ?>
 
 		<?php if ($this->sdp->team_photo == !NULL): ?> 
-		<div class="sdpimg">
 			<img src="<?php echo $this->sdp->team_photo ?>" alt="Photo of <?php echo $this->sdp->students ?>">
-		</div>
 		<?php endif ?>
+
+		</p>
 
 		<?php if ($this->sdp->url == !NULL): ?>
 		<p class="sdpsponsors"><b>Sponsor: </b><a href="<?php echo $this->sdp->url ?>"><?php echo $this->sdp->name ?></a></p>
@@ -28,15 +28,14 @@
 
 		<?php if ($this->sdp->graphic1 == !NULL): ?> 
 		<div class="sdpimg">
+			<p>Images related the project:</p>
 			<img src="<?php echo $this->sdp->graphic1 ?>" alt="Photo related to <?php echo $this->sdp->title ?> project">
-			<p>Project Graphic</p>
 		</div>
 		<?php endif ?>
 
 		<?php if ($this->sdp->graphic2 == !NULL): ?> 
 		<div class="sdpimg">
 			<img src="<?php echo $this->sdp->graphic2 ?> " alt="Photo related to <?php echo $this->sdp->title ?> project">
-			<p>Project Graphic</p>
 		</div>
 		<?php endif ?>
 
