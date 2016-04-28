@@ -22,14 +22,17 @@
 
 		<div class="sdpimg">
 			<img src="<?php echo $this->sdp->graphic1 ?>">
+			<p>Project Graphic</p>
 		</div>
 
 		<div class="sdpimg">
 			<img src="<?php echo $this->sdp->graphic2 ?>">
+			<p>Project Graphic</p>
 		</div>
 
 		<div class="sdpimg">
 			<img src="<?php echo $this->sdp->team_photo ?>">
+			<p>Team Photo</p>
 		</div>
 
 		
