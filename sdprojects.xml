@@ -46,8 +46,8 @@
 			<folder>views</folder>
 			<!-- controllers files section -->
 			<folder>controllers</folder>
+			<folder>language</folder>
 		</files>
-		<menu>COM_SDPROJECTS</menu>
 	</administration>
  
 </extension>
