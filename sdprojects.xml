@@ -47,6 +47,7 @@
 			<!-- controllers files section -->
 			<folder>controllers</folder>
 		</files>
+		<menu>COM_SDPROJECTS</menu>
 	</administration>
  
 </extension>
