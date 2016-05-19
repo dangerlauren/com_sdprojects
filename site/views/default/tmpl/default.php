@@ -18,7 +18,7 @@ foreach($this->items as $row):
 </div>
 <div class="pagination">
 <p class="counter"><?php echo $this->pagination->getPagesCounter(); ?></p>
-<?php echo $this->pagination->getPagesLinks(); ?>
+<?php echo $this->pagination->getListFooter();/*echo $this->pagination->getPagesLinks();*/ ?>
 </div>
 </div>
 
