@@ -7,11 +7,10 @@
 
 <?php 
 foreach($this->items as $row):
-$i++;
 ?>
 
 <div class="sdp">
-	<p class="sdp-title"><?php echo $i; ?><a href="<?php echo JRoute::_('index.php?option=com_sdprojects&view=details&id='.$row->id); ?>"><?php echo $row->title ?></a><!-- <?php echo $row->id ?> --></p>
+	<p class="sdp-title"><a href="<?php echo JRoute::_('index.php?option=com_sdprojects&view=details&id='.$row->id); ?>"><?php echo $row->title ?></a><!-- <?php echo $row->id ?> --></p>
 	<p class="sdpstudents"><?php echo $row->students ?></p>
 	<p class="sdpsemester"><?php echo $row->semester ?> <?php echo $row->year ?></p>
 </div>
