@@ -1,8 +1,8 @@
 <?php defined('_JEXEC') or die('Restricted access'); ?>
-<h1>Senior Design Projects</h1>
+
 
 <div id="sdprojects">
-
+<h1>Senior Design Projects</h1>
 <div class="sdprojectslist">
 
 <?php 
