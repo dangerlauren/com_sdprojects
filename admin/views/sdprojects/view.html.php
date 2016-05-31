@@ -47,6 +47,8 @@ class SdprojectsViewSdprojects extends JViewLegacy
 	 */
 	protected function addToolBar()
 	{
+		
+
 		JToolBarHelper::title(JText::_('Sdprojects Manager'));
 		JToolBarHelper::addNew('sdp.add');
 		JToolBarHelper::editList('sdp.edit');
