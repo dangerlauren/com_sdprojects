@@ -30,4 +30,20 @@ class SdprojectsModelDefault extends JModelList
 		$sdps = $db->loadObjectList();
 		return $query;
 	}
+
+	protected function populateState($ordering = null, $direction = null) {
+	  $app = JFactory::getApplication();
+
+	  $limit = $app->getUserStateFromRequest('global.list.limit', 'limit', $app->getCfg('list_limit'), 'uint');
+	  $this->setState('list.limit', $limit);
+	  // As you can see if no limit is set, it gets it from default value of config, 
+	  // but you can replace $app->getCfg('list_limit') by any integer you want to 
+	  // override default limit value
+
+	  $limitstart = $app->input->get('limitstart', 0, 'uint');
+	  $this->setState('list.start', $limitstart);
+
+	  $limitstart = $app->input->get('limitstart', 0, 'uint');
+	  $this->setState('list.start', $limitstart); 
+	}
 }
